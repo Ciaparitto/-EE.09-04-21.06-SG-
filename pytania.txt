@@ -1,0 +1,7 @@
+SELECT id,imie,nazwIsko,rok_urodzenia,zdjecie FROM osoby LIMIT 30
+
+SELECT osoby.id,osoby.imie,osoby.nazwisko,osoby.rok_urodzenia,osoby.opis,osoby.zdjecie,hobby.nazwa FROM osoby,hobby WHERE hobby.id = osoby.Hobby_id AND osoby.id = 10;
+
+SELECT AVG(rok_urodzenia) AS sredni_wiek, MIN(rok_urodzenia) AS najniższy_wiek, MAX(rok_urodzenia) AS najwyższy_wiek FROM osoby;
+
+UPDATE osobySET opis = 'gimnastyka' WHERE Hobby_id = 4;
